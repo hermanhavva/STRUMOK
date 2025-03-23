@@ -21,9 +21,6 @@
     <ClCompile Include="strumok_tables.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="use_example.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="strumok.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
