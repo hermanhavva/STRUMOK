@@ -24,9 +24,15 @@
     <ClCompile Include="use_example.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="strumok.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="strumok_tables.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="strumok.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
