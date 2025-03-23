@@ -2,7 +2,10 @@
 
 
 StrumokCipher::StrumokCipher(const StrumokCipher::Mode mode) :
-	curMode(mode) {}
+	curMode(mode) 
+{
+	curState = make_shared<IternalState>();
+}
 
 void StrumokCipher::Init(vector<uint64_t> key, vector<uint64_t> IV)
 {
@@ -88,7 +91,7 @@ void StrumokCipher::Init(vector<uint64_t> key, vector<uint64_t> IV)
 	}
 	else
 	{
-		for (uint64_t index = 0; curState->linearRegisters.size(); index++)
+		for (uint64_t index = 0; index < curState->linearRegisters.size(); index++)
 		{
 			uint64_t curRegisterValue = 0;
 
@@ -161,7 +164,7 @@ void StrumokCipher::Init(vector<uint64_t> key, vector<uint64_t> IV)
 	}
 
 	Next();
-
+	ifInitialized = true;
 }
 
 void StrumokCipher::Next(const StrumokCipher::NextMode nextMode /*= StrumokCipher::NextMode::kNormal*/) noexcept
