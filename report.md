@@ -7,6 +7,7 @@
 - `strumok_tables.h` (містить матриці нелінійної підстановки T0 - T7, alpha_mul, alpha_inv)
 - `strumok_tables.cpp`
 
+Реалізацію шифру було протестовано на векторах, поданих у документації ДСТУ.
 <details>
 
 <summary>Strumok UML diagram</summary>
@@ -66,3 +67,5 @@ classDiagram
 </details>
 
 #### AutoGuess analysis 
+
+##### Граф залежностей 
