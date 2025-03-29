@@ -11,7 +11,7 @@
 
 <summary>Strumok UML diagram</summary>
 
-[Strumok diagram](./STRUMOK/analysis/strumok_uml.png)
+[Strumok diagram](./strumok/analysis/strumok_uml.png)
 
 <details>
 
