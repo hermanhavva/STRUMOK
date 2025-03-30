@@ -125,7 +125,7 @@ int main()
 
 
 	// Z_9 = FSM(S_24, R_1_9, R_2_9) ^ S_9; 
-	S[9] = Z[9] ^ StrumokCipher::FSM(S[24], R[8] + S[21], R[9]);   // S_21 is wrong
+	S[9] = Z[9] ^ StrumokCipher::FSM(S[24], R[8] + S[21], R[9]);   
 	
 	// R_2_t+2 = T(R_2_t + S_13+t) 
 	R[13] = StrumokCipher::transform_T(R[11] + S[24]); 
