@@ -54,8 +54,6 @@ public:
 	// ##############################################
 	uint64_t Strm() const noexcept;
 
-private:
-
 	// ##############################################
 	// # struct IternalState
 	// # contains the linear register and FSM rigisters (r1 r2)
@@ -78,6 +76,15 @@ private:
 		uint64_t r1;
 		uint64_t r2;
 	};
+
+	IternalState GetCurState() const
+	{
+		return *(this->curState);
+	}
+
+private:
+
+
 
 
 	shared_ptr<IternalState>	 curState;
