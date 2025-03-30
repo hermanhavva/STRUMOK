@@ -82,6 +82,16 @@ public:
 		return *(this->curState);
 	}
 
+	static inline uint64_t FSM(uint64_t x, uint64_t y, uint64_t z);
+
+	static inline uint64_t a_mul(const uint64_t x);
+
+	static inline uint64_t ainv_mul(const uint64_t x);
+
+	static inline uint64_t transform_T(const uint64_t x);
+
+
+
 private:
 
 
@@ -92,12 +102,6 @@ private:
 	bool						 ifInitialized = false;
 	const static inline uint64_t kIvLength = 4;
 
-	static inline uint64_t FSM(uint64_t x, uint64_t y, uint64_t z);	
 
-	static inline uint64_t a_mul(const uint64_t x);
-
-	static inline uint64_t ainv_mul(const uint64_t x);
-
-	static inline uint64_t transform_T(const uint64_t x);
 
 };
