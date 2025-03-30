@@ -64,6 +64,9 @@ int main()
 		map[format("Z_{}", t)] = result;
 		map[format("R_{}", t)] = curState.r2;
 
+		Z[t] = map[format("Z_{}", t)];
+		cout << format("Z_{} ", t) << map[format("Z_{}", t)] << endl;
+
 		cipher.Next();
 	}
 
@@ -82,12 +85,6 @@ int main()
 		cout << curIndex + " " << std::hex << map[curIndex] << endl;
 	}
 
-	for (int i = 0; i <= 15; i++)
-	{
-		Z[i] = map[format("Z_{}", i)];
-		cout << format("Z_{} ", i) << map[format("Z_{}", i)] << endl;
-	} 
-	
 
 	// ###############################
 	// trying to find what is possible 
@@ -122,11 +119,6 @@ int main()
 
 	// R_2_t+2 = T(R_2_t + S_13+t) | R_2_10 = T(R_2_8 + S[21])
 	R[10] = StrumokCipher::transform_T(R[8] + S[21]);
-
-	
-	// S_21 = a_mul(S_5) ^ ainv_mul(S_16) ^ S_18 
-	// we cannot find S[16] with S[5]
-//	S[16] = StrumokCipher::a_mul(S[21] ^ S[18] ^ StrumokCipher::a_mul(S[5]));
 
 	// use standart formula for calculating S_15 on the tact t
 	S[23] = StrumokCipher::a_mul(S[7]) ^ StrumokCipher::ainv_mul(S[18]) ^ S[20];
@@ -215,8 +207,5 @@ int main()
 		else
 			cout << "R value " << std::dec << i << " not guessed" << endl;
 	}
-
-	cout << map["S_16"] << endl;
-	cout << S[16];
 
  }
