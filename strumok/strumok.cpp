@@ -1,4 +1,5 @@
 #include "strumok.h"
+#include <stdexcept>
 
 
 StrumokCipher::StrumokCipher(const StrumokCipher::Mode mode) :

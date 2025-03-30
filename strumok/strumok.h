@@ -4,6 +4,7 @@
 #include <vector>
 #include <format>
 #include "strumok_tables.h"
+#include <memory>
 
 using namespace std;
 
