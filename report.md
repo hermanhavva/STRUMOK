@@ -3,7 +3,7 @@
 #### Objective:
 
 To independently implement the "Strumok" cipher according to the current DSTU standard.  
-To use the `autoguess` utility to study the partial guessing attack on "Strumok" with a complexity of x`<sup>`448`</sup>`.
+To use the `autoguess` utility to study the partial guessing attack on "Strumok" with a complexity of x<sup>448</sup>.
 
 #### Implementation
 
@@ -154,6 +154,11 @@ This report part provides an analysis of the autoguess process performed using t
 ##### Conclusion
 
 The auto-guess analysis demonstrates the effectiveness of the `StrumokCipher` implementation in generating and transitioning internal states. Future work could focus on improving the handling of unknown values and finding a way to get $R_{t-1}, S_{t-1}$ values.
+
+##### Team work distribution
+
+- Herman was responsible for implementing "Strumok" cipher and performing calculations as a part of the GD attack
+- Oleksandr was responsible for the autoguess analysis as well as making the report. 
 
 ##### References
 
