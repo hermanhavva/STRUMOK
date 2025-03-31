@@ -1,25 +1,20 @@
-### Репорт
+### Report
 
-#### Мета:
+#### Objective:
 
-Самостійно програмно реалізувати шифр "Струмок" згідно чинного стандарту ДСТУ.
-Використати утіліту `autoguess` для дослідження атаки часткового вгадування на "Струмок" зі
-складністю x`<sup>`448`</sup>`
+To independently implement the "Strumok" cipher according to the current DSTU standard.  
+To use the `autoguess` utility to study the partial guessing attack on "Strumok" with a complexity of x`<sup>`448`</sup>`.
 
-#### Програмна реалізація
+#### Implementation
 
-##### Імплементація шифру "Струмок" складається з чотирьох файлів.
+##### The implementation of the "Strumok" cipher consists of four files:
 
-- `strumok.h` (містить клас `StrumokCipher`)
+- `strumok.h` (contains the `StrumokCipher` class)
 - `strumok.cpp`
-- `strumok_tables.h` (містить матриці нелінійної підстановки T0 - T7, alpha_mul, alpha_inv)
+- `strumok_tables.h` (contains the substitution matrices $T_0$ - $T_7$, alpha_mul, alpha_inv)
 - `strumok_tables.cpp`
 
-Реалізацію шифру було протестовано на векторах, поданих у документації ДСТУ.
-
-<details>
-
-<summary>Strumok UML diagram</summary>
+The cipher implementation was tested using the test vectors provided in the DSTU documentation.
 
 [Strumok diagram](./strumok/analysis/strumok_uml.png)
 
@@ -70,8 +65,6 @@ classDiagram
     StrumokCipher "1" --> "1" NextMode
 
 ```
-
-</details>
 
 </details>
 
