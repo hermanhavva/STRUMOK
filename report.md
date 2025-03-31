@@ -110,7 +110,7 @@ This report part provides an analysis of the autoguess process performed using t
      - The tool was executed with the same input files and configurations specified in [Input Parameters for Autoguess tool](#input-parameters-for-autoguess-tool) section.
      - Results were collected and formatted for comparison.
 3. **Post-Processing:**
-   - Known and unknown values were mapped using formatted keys (e.g., $S_{22}$, $R_6$).
+   - By using known variables and the generated graph we were able to find the rest of the values $S_{6}$ - $S_{31}$ and $R_{7}$ - $R_{17}$.
    - Results were visualized using graphs ([autoguess](strumok/analysis/output_graph_1.pdf) and [implementation_based](relations.pdf)).
 
 ##### Results
