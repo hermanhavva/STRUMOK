@@ -91,6 +91,11 @@ This report part provides an analysis of the autoguess process performed using t
    - Input files were parsed to extract relevant data for analysis.
    - The `StrumokCipher` class from [strumok/strumok.h](strumok/strumok.h) was used to simulate the cipher's behavior.
    - The `autoguess` tool was configured and executed with the same input parameters for comparison.
+   - Constructed formulas to calculate $R$-values:
+    $R_1(t+1) = R_2(t) + S(13+t)$ 
+    $R_2(t+1) = T(R_1(t))$
+    $R_2(t+2) = T(R_2(t) + S13+t)$
+    - As operation T is irreversable, we can not construct such values as $R_2(t-i)$, thus, in our case, such values as $R_2(t<5)$, and values that depend on them – can not be constructed.
 2. **Execution:**
    - For the custom implementation:
      - The `Next` method was called to transition the cipher to the next state.
@@ -102,7 +107,7 @@ This report part provides an analysis of the autoguess process performed using t
      - Results were collected and formatted for comparison.
 3. **Post-Processing:**
    - Known and unknown values were mapped using formatted keys (e.g., $S_{22}$, $R_6$).
-   - Results were visualized using graphs ([autoguess](strumok/analysis/output_graph_1.pdf) and [implementation_based](fill_later)).
+   - Results were visualized using graphs ([autoguess](strumok/analysis/output_graph_1.pdf) and [implementation_based](relations.pdf)).
 
 ##### Results
 
@@ -116,7 +121,7 @@ This report part provides an analysis of the autoguess process performed using t
 
 - [autoguess_output_graph.pdf](output_graph.pdf): Visualization of the autoguess analysis for 11 clock cycles.
 - [autoguess_output_graph13.pdf](output_graph13.pdf): Visualization of the autoguess analysis for 13 clock cycles.
-- [implementation_based_graph.pdf](#fill_later): Visualisation of the implementation-based analysis for 11 clock sycles
+- [implementation_based_graph.pdf](relations.pdf): Visualisation of the implementation-based analysis for 11 clock sycles
 
 ###### Detailed Autoguess Results
 
