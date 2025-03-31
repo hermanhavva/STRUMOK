@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <vector>
 #include <format>
+#include <memory>
 #include "strumok_tables.h"
 
 using namespace std;
