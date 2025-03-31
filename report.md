@@ -92,9 +92,13 @@ This report part provides an analysis of the autoguess process performed using t
    - The `StrumokCipher` class from [strumok/strumok.h](strumok/strumok.h) was used to simulate the cipher's behavior.
    - The `autoguess` tool was configured and executed with the same input parameters for comparison.
    - Constructed formulas to calculate $R$-values:
-    $R_1(t+1) = R_2(t) + S(13+t)$ 
+   
+    $R_1(t+1) = R_2(t) + S(13+t)$
+
     $R_2(t+1) = T(R_1(t))$
+
     $R_2(t+2) = T(R_2(t) + S13+t)$
+    
     - As operation T is irreversable, we can not construct such values as $R_2(t-i)$, thus, in our case, such values as $R_2(t<5)$, and values that depend on them – can not be constructed.
 2. **Execution:**
    - For the custom implementation:
